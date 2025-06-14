@@ -1,0 +1,1 @@
+// Placeholder for PDF.js library. Use CDN or include real PDF.js for production.
