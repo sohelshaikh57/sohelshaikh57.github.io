@@ -1,29 +1,10 @@
-// URL of your PDF
-const pdfUrl = 'Admit%20Card%20Ssc.pdf';
+// flipbook.js
 
-// PDF.js config
-const pdfjsLib = window['pdfjs-dist/build/pdf'];
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+// 👉 Make sure your PDF is in same folder and EXACT name:
+const pdfUrl = "Admit Card SSC.pdf";
 
-// Load PDF
-pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
-  const container = document.getElementById('flipbook');
-  for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-    pdf.getPage(pageNum).then(page => {
-      const scale = 1.5;
-      const viewport = page.getViewport({ scale: scale });
+// ✅ Load PDF in iframe:
+document.getElementById("pdf-viewer").src = pdfUrl;
 
-      const canvas = document.createElement('canvas');
-      const context = canvas.getContext('2d');
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
-
-      page.render({
-        canvasContext: context,
-        viewport: viewport
-      });
-
-      container.appendChild(canvas);
-    });
-  }
-});
+// ✅ Debug log
+console.log("Flipbook.js loaded, showing PDF:", pdfUrl);
