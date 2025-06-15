@@ -2,49 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Public Contact E-paper</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>My E-paper</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; }
-    header {
-      background: linear-gradient(to right, #f36d47, #f9c846);
-      color: white;
-      padding: 10px;
+    body {
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
-    .social {
-      text-align: center;
-      margin: 10px 0;
-    }
-    .social a {
-      margin: 0 10px;
-      color: #333;
-      font-size: 24px;
-      text-decoration: none;
-    }
-    #pdf-viewer {
+    iframe {
       width: 100%;
-      height: calc(100vh - 150px);
+      height: 100vh;
       border: none;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>📰 पब्लिक कॉन्टॅक्ट</h1>
-    <p>E-paper Public Contact</p>
-  </header>
-
-  <div class="social">
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-x-twitter"></i></a>
-    <a href="#"><i class="fab fa-whatsapp"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-    <a href="#"><i class="fas fa-paper-plane"></i></a>
-    <a href="#"><i class="fas fa-print"></i></a>
-    <a href="#"><i class="fas fa-envelope"></i></a>
-  </div>
-
+  <h1>Weekly Buland Loktantra</h1>
   <iframe id="pdf-viewer"></iframe>
 
   <script src="flipbook.js"></script>
