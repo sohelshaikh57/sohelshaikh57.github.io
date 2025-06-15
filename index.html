@@ -1,24 +1,34 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Weekly Buland Loktantra</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Weekly Buland Loktantra - E-paper</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    #flipbook {
+      width: 90%;
+      margin: 20px auto;
+    }
+    canvas {
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Weekly Buland Loktantra</h1>
-        <nav>
-            <a href="archive.html">Archive</a>
-        </nav>
-    </header>
-    <main>
-  <iframe src="Admit%20Card%20Ssc.pdf" width="100%" height="600px">
-    This browser does not support PDFs. <a href="Admit%20Card%20Ssc.pdf">Download PDF</a>
-  </iframe>
-   </main>
-    <script src="js/pdf.js"></script>
-    <script src="js/flipbook.js"></script>
+  <h1>Weekly Buland Loktantra</h1>
+  <nav><a href="archive.html">Archive</a></nav>
+  <div id="flipbook"></div>
+
+  <!-- PDF.js from CDN -->
+  <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+  <!-- Your flipbook script -->
+  <script src="flipbook.js"></script>
 </body>
 </html>
